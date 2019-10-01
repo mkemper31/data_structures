@@ -3,29 +3,34 @@ public class TrieTest {
 	public static void main(String[] args) {
 		Trie trie = new Trie();
 		trie.insertWord("car");
-        trie.insertWord("card");
-        trie.insertWord("chip");
-        trie.insertWord("trie");
-        trie.insertWord("try");
-        trie.insertWord("Lorem".toLowerCase());
-        trie.insertWord("ipsum".toLowerCase());
-        trie.insertWord("dolor".toLowerCase());
-        trie.insertWord("sit".toLowerCase());
-        trie.insertWord("amet".toLowerCase());
-        trie.insertWord("consectetur".toLowerCase());
-        trie.insertWord("adipiscing".toLowerCase());
-        trie.insertWord("elit".toLowerCase());
-        trie.insertWord("Nunc".toLowerCase());
-        trie.insertWord("interdum".toLowerCase());
-        trie.insertWord("magna".toLowerCase());
-        trie.insertWord("eget".toLowerCase());
-        trie.insertWord("rutrum".toLowerCase());
-        trie.insertWord("dui".toLowerCase());
-        trie.insertWord("Sed".toLowerCase());
-        trie.insertWord("elementum".toLowerCase());
-        trie.insertWord("elit".toLowerCase());
-        trie.insertWord("risus".toLowerCase());
-        trie.printAllKeys();
+    trie.insertWord("unambivalent");
+    trie.insertWord("uninformed");
+    trie.insertWord("card");
+    trie.insertWord("chip");
+    trie.insertWord("application");
+    trie.insertWord("appliance");
+    trie.insertWord("amplify");
+    trie.insertWord("amplification");
+    trie.insertWord("ambivalent");
+    trie.insertWord("bulldog");
+    trie.insertWord("bull");
+    trie.insertWord("bullhorn");
+    trie.insertWord("apple");
+    trie.insertWord("trie");
+    trie.insertWord("tries");
+    trie.insertWord("nice");
+    trie.insertWord("niceties");
+    trie.insertWord("niceness");
+    trie.insertWord("cattle");
+    trie.insertWord("cuneiform");
+    trie.insertWord("kiloton");
+    trie.insertWord("try");
+    trie.insertWord("uniform");
+    trie.insertWord("unify");
+    trie.insertWord("a");
+    trie.insertWord("an");
+    trie.insertWord("anonymous");
+    trie.printAllKeys();
+    trie.printAllWords();
 	}
-
 }

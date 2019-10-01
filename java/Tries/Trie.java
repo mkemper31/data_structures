@@ -47,15 +47,29 @@ public class Trie {
 		return currentNode.isCompleteWord;
 	}
 	public void printAllKeys() {
-		this.printAllKeys(this.root);
+		this.printAllKeys(this.root, 0);
 
 	}
-	private void printAllKeys(Node root) {
-		Node currentNode = root;
+	private void printAllKeys(Node node, Integer depth) {
+		Node currentNode = node;
 		Set<Character> keys = currentNode.children.keySet();
 		for(Character k: keys) {
+      for(int i = 0; i < depth; i++) {
+        System.out.print("-");
+      }
 			System.out.println(k);
-			this.printAllKeys(currentNode.children.get(k));
+			this.printAllKeys(currentNode.children.get(k), depth + 1);
 		}
-	}
+  }
+  public void printAllWords() {
+    this.printAllWords(this.root, "");
+  }
+  private void printAllWords(Node node, String word) {
+    Node currentNode = node;
+    if (node.isCompleteWord) System.out.println(word);
+    Set<Character> keys = currentNode.children.keySet();
+    for (Character k: keys) {
+      this.printAllWords(currentNode.children.get(k), word.concat(k.toString()));
+    }
+  }
 }
