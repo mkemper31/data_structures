@@ -142,5 +142,21 @@ public class DLL {
 			tailRunner = tailRunner.previous;
 		}
 		return true;
-	}
+  }
+  public int removeAll(int val) {
+    if (this.head == null) {
+      return -1;
+    }
+    int result = 0;
+    Node runner = this.head;
+    while(runner.next != null) {
+      if (runner.next.value == val) {
+        result++;
+        runner.next = runner.next.next;
+        runner.next.prev = runner;
+      }
+      runner = runner.next;
+    }
+    return result;
+  }
 }

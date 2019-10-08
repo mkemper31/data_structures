@@ -43,7 +43,7 @@ class BST {
         this.traverseInOrder(node.right);
         return this;
     }
-    findDepth(node=this.root) {
+    maxDepth(node=this.root) {
         if(node==null) return 0;
         return Math.max(this.findDepth(node.left)+1, this.findDepth(node.right)+1);
     }
