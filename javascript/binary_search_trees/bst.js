@@ -22,6 +22,10 @@ class BST {
         }
         return this;
     }
+    /**
+     *
+     * @param {Node} node
+     */
     traversePreOrder(node=this.root) {
         if(node == null) return this;
         console.log(node.val);
@@ -56,6 +60,11 @@ class BST {
         if(!node) return null;
         if(!node.left) return node.val;
         else return this.findMin(node.left);
+    }
+    findKthSmallest(k) {
+      const arr = [];
+      traverseAndPush(this.root, arr);
+      return arr[k-1];
     }
     remove(n, node=this.root) {
         if(!node) return false;
@@ -179,6 +188,10 @@ class Node {
     }
 }
 
+const myTree = new BST();
+generateRandomTree(myTree, 20);
+myTree.traverseInOrder();
+console.log(myTree.findKthSmallest(5));
 
 function generateRandomTree(tree, n) {
     for(let i = 0; i < n; i++) {

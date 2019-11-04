@@ -1,2 +1,5 @@
 # Compiled Java classes
 *.class
+
+# Tester
+sandbox.js
